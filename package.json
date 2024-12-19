@@ -1,0 +1,63 @@
+{
+  "name": "next.js-with-react-native-web",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,json,ts,tsx,css,md}\" \"!package.json\"",
+    "prepare": "husky && patch-package",
+    "test": "npm run lint && tsc --noEmit"
+  },
+  "overrides": {
+    "react-native": {
+      "react": "19.0.0"
+    },
+    "react-native-web": {
+      "react": "19.0.0",
+      "react-dom": "19.0.0"
+    },
+    "react-native-gesture-handler": {
+      "react": "19.0.0"
+    },
+    "react-native-safe-area-context": {
+      "react": "19.0.0"
+    }
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.1.0",
+    "next": "15.1.2",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-native-gesture-handler": "^2.21.2",
+    "react-native-reanimated": "^3.16.3",
+    "react-native-safe-area-context": "^4.14.0",
+    "react-native-web": "^0.19.13",
+    "ts-pattern": "^5.5.0"
+  },
+  "devDependencies": {
+    "@tsconfig/react-native": "^3.0.5",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.1.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "patch-package": "^8.0.0",
+    "prettier": "^3.3.3",
+    "react-from-svg": "^6.0.0",
+    "react-native": "^0.76.2",
+    "string-replace-loader": "^3.1.0",
+    "typescript": "^5"
+  }
+}
